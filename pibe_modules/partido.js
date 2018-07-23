@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, AppRegistry, ImageBackground, Button } from 're
 import React, { Component } from 'react';
 import { ListMatch } from './list_match';
 
-class PartidoScreen extends React.Component {
+export class PartidoScreen extends React.Component {
     static navigationOptions = {
         title: 'The Organe system',
         // header: null,
@@ -29,7 +29,7 @@ class PartidoScreen extends React.Component {
 }
 
 
-export default { PartidoScreen }
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -54,3 +54,4 @@ const styles = StyleSheet.create({
     }
 }
 );
+export default {PartidoScreen}

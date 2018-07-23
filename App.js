@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, AppRegistry, ImageBackground, Button } from 'react-native';
 import { MatchScreen } from './pibe_modules/match_screen';
 import { PartidoScreen } from './pibe_modules/partido';
+import { ListMatch } from './pibe_modules/list_match';
 import { createStackNavigator, createMaterialTopTabNavigator } from 'react-navigation';
 import {provider} from 'react-redux';
 import {createStore} from 'redux';
@@ -54,6 +55,9 @@ const RootStack = createMaterialTopTabNavigator(
   {
     Home: HomeScreen,
     MatchScreen: MatchScreen,
+    PartidoScreen: PartidoScreen,
+    ListMatch: ListMatch,
+
   },
   {
     initialRouteName: 'Home',

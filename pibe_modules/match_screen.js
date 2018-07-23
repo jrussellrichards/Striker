@@ -1,9 +1,14 @@
 import { StyleSheet, Text, View, AppRegistry, ImageBackground, Button } from 'react-native';
 import React, { Component } from 'react';
 import { ListMatch } from './list_match';
+import { withNavigation } from 'react-navigation';
+
 
 
 export class MatchScreen extends React.Component {
+  constructor(props){
+    super(props);
+  }
     static navigationOptions = {
       title: 'Find your match',
       // header: null,
@@ -16,7 +21,7 @@ export class MatchScreen extends React.Component {
           style={styles.container}>
           <View style={styles.inner}>
             
-          <ListMatch/>
+          <ListMatch navigation={this.props.navigation} />
           </View>
   
   
@@ -28,7 +33,7 @@ export class MatchScreen extends React.Component {
     }
   }
 
-  export default{MatchScreen}
+  export default withNavigation(MatchScreen)
   const styles = StyleSheet.create({
     container: {
       flex: 1,

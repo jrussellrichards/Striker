@@ -2,6 +2,7 @@ import { List, ListItem } from 'react-native-elements';
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, AppRegistry } from 'react-native';
 import {  Button } from 'react-native';
+import { withNavigation } from 'react-navigation';
 
 
 
@@ -19,6 +20,9 @@ const list = [
 ]
 
 export class ListMatch extends React.Component {
+  constructor(props){
+    super(props);
+  }
   
   render() {
     return (
@@ -50,4 +54,4 @@ export class ListMatch extends React.Component {
   }
 }
 
-export default { ListMatch }
+export default withNavigation(ListMatch)
